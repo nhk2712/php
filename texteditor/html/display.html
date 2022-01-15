@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <form id="format" method="post" action="php/saveFormat.php">
+                <select id="font" name="font">
+                    <option value="Times New Roman" style="font-family: 'Times New Roman'">Times New Roman</option>
+                    <option value="Arial" style="font-family: 'Arial'">Arial</option>
+                    <option value="Segoe UI" style="font-family: 'Segoe UI'">Segoe UI</option>
+                    <option value="Calibri" style="font-family: 'Calibri'">Calibri</option>
+                    <option value="Lucida Sans" style="font-family: 'Lucida Sans'">Lucida Sans</option>
+                    <option value="Courier New" style="font-family: 'Courier New'">Courier New</option>
+                    <option value="Gill Sans" style="font-family: 'Gill Sans'">Gill Sans</option>
+                    <option value="Helvetica" style="font-family: 'Helvetica'">Helvetica</option>
+                    <option value="Cambria Math" style="font-family: 'Cambria Math'">Cambria Math</option>
+                </select>
+                <select id="size" name="size">
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="24">24</option>
+                    <option value="28">28</option>
+                </select>
+                <input type="number" value="0" name="bold" class="check">
+                <input type="number" value="0" name="italic" class="check">
+                <input type="number" value="0" name="spellcheck" class="check">
+            </form>
+
+            <input type="checkbox" id="bold" name="bold">
+            <label style="font-weight: bold;">Bold</label>
+            <input type="checkbox" id="italic" name="italic">
+            <label style="font-style: italic;">Italic</label>
+            <input type="checkbox" id="spellcheck" name="spellcheck">
+            <label>Spell check</label>
+
+            <button id="down">Download</button>
+            <button id="save">Save</button>
+            <div id="datetime"> </div>
+        </div>
+
+        <form id="edit" method="post" action="save.php">
+            <textarea id="txt" name="txt" autofocus spellcheck="false"></textarea>
+        </form>
+
+    </div>
+
+    <style>
+        #edit {
+            width: fit-content;
+            margin: 0px;
+        }
+
+        #txt {
+            width: 800px
+        }
+
+        #datetime {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: grey;
+            font-style: italic;
+        }
+
+        .check {
+            display: none;
+        }
+    </style>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        var edit = document.querySelector('#edit')
+        var datetime = document.querySelector('#datetime')
+
+        txt.onkeyup = saveFile
+
+        var save = document.querySelector('#save')
+        save.onclick = saveFile
+
+        function saveFile() {
+            $.post('php/save.php', $('#edit').serialize())
+            datetime.innerText = 'Last modified: ' + Date()
+        }
+
+        var format = document.querySelector('#format')
+        var boldF = document.getElementsByName('bold'),
+            italicF = document.getElementsByName('italic'),
+            spellF = document.getElementsByName('spellcheck');
+
+        boldF[1].onchange = function () {
+            if (this.checked) boldF[0].value = 1
+            else boldF[0].value = 0
+
+            if (this.checked) txt.style.fontWeight = 'bold'
+            else txt.style.fontWeight = 'unset'
+
+            saveFormat()
+        }
+
+        italicF[1].onchange = function () {
+            if (this.checked) italicF[0].value = 1
+            else italicF[0].value = 0
+
+            if (this.checked) txt.style.fontStyle = 'italic'
+            else txt.style.fontStyle = 'unset'
+
+            saveFormat()
+        }
+
+        spellF[1].onchange = function () {
+            if (this.checked) spellF[0].value = 1
+            else spellF[0].value = 0
+
+            if (this.checked) txt.spellcheck = true
+            else txt.spellcheck = false
+
+            saveFormat()
+        }
+
+        font.onchange = function () {
+            txt.style.fontFamily = font.value
+            font.style.fontFamily = font.value
+
+            saveFormat()
+        }
+
+        size.onchange = function () {
+            txt.style.fontSize = size.value + 'px'
+
+            saveFormat()
+        }
+
+        function saveFormat() {
+            $.post('php/saveFormat.php', $('#format').serialize())
+        }
+    </script>
+</body>
+
+</html>

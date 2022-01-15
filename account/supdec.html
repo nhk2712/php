@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="noti">
+            <p id="alert">This username is already exist. Sign in?</p>
+            <button class="btn" id="sin" onclick="location.href='signin.html'">Sign in</button>
+            <button class="btn" id="back" onclick="history.back()">Go back</button>
+        </div>
+        <style>
+            body{
+                background-color:lavender;
+            }
+
+            #noti{
+                background-color: white;
+                border-radius: 5px;
+                margin:auto;
+                width: fit-content;
+                padding: 5px 20px 20px 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 17px;
+                margin-top:10%;
+            }
+
+            .btn{
+                width: 100%;
+                padding:10px;
+                outline: none;
+                border-radius: 5px;
+                cursor:pointer;
+                font-size: 17px;
+                transition:500ms;
+                margin:10px 0px 10px 0px;
+            }
+
+            #sin{
+                background-color:rgb(169, 13, 241);
+                color:white;
+                border:1px solid rgb(169, 13, 241);
+            }
+
+            #sin:active{
+                background-color:rgb(101, 6, 145);
+                border:1px solid rgb(101, 6, 145);
+            }
+
+            #back{
+                background-color:white;
+                color:rgb(169, 13, 241);
+                border:1px solid rgb(169, 13, 241);
+            }
+
+            #back:active{
+                background-color:rgb(204, 204, 204);
+            }
+        </style>
+    </body>
+    
+</html>

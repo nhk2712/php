@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="noti">
+            <p id="alert">You have already uploaded a product!</p>
+            <button id="back" onclick="history.back()">Got it</button>
+        </div>
+        <style>
+            body{
+                background-color:lavender;
+            }
+
+            #noti{
+                background-color: white;
+                border-radius: 5px;
+                margin:auto;
+                width: fit-content;
+                padding: 5px 20px 20px 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 17px;
+                margin-top:10%;
+            }
+
+            #back{
+                width: 100%;
+                padding:10px;
+                background-color:rgb(169, 13, 241);
+                border:none;
+                outline: none;
+                color:white;
+                border-radius: 5px;
+                cursor:pointer;
+                font-size: 17px;
+                transition:500ms;
+            }
+
+            #back:active{
+                background-color:rgb(101, 6, 145);
+            }
+        </style>
+    </body>
+    
+</html>

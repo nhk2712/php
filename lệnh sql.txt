@@ -1,0 +1,6 @@
+Câu lệnh SQL:
+1. INSERT INTO bảng (cột 1, cột 2) VALUES ('giá trị 1', 'giá trị 2')
+2. UPDATE bảng SET cột 1='giá trị 1', cột 2='giá trị 2' WHERE cột i='giá trị i'
+3. DELETE FROM bảng [WHERE cột i='giá trị i']
+4. SELECT cột 1, cột 2 FROM bảng
+Muốn chọn hết: SELECT * FROM bảng

@@ -1,0 +1,37 @@
+#main{
+    margin:auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+
+.tile{
+    background-color: rgb(197, 241, 255);
+    border-radius:5px;
+    margin: 10px;
+    padding: 5px 0px 15px 20px;
+    color: #333;
+}
+
+.tile:active{
+    background-color:rgb(150, 225, 248);
+}
+
+.ava{
+    float: left;
+    margin-right:30px;
+    margin-top:10px;
+}
+
+#name{
+    font-weight:bold;
+    font-size:25px;
+}
+
+#producer{
+    font-size: 20px;
+}
+
+#price{
+    color:#555;
+    font-size: 17px;
+}

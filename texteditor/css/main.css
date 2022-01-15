@@ -1,0 +1,51 @@
+body{
+    margin:0px;
+    background-color:rgb(238, 237, 237);
+}
+
+#txt{
+    outline:none;
+    border:1px solid grey;
+    border-radius:0px;
+    padding:20px;
+    resize: none;
+    height:500px;
+}
+
+@media all and (max-width:768px){
+    #txt{
+        width:90%;
+    }
+}
+
+@media all and (min-width:768px){
+    #txt{
+        width:50%;
+    }
+}
+
+#font,#size{
+    cursor:pointer;
+}
+
+label{
+    user-select:none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+}
+
+input[type="checkbox"]{
+    transform:translateY(1px);
+    cursor:pointer;
+}
+
+button{
+    cursor:pointer;
+}
+
+#container{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    align-items:center;
+}

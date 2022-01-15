@@ -1,0 +1,37 @@
+div[name="thank"]
+{
+    border: 1px solid gray;
+    background-color:white;
+    width:50%;
+    margin:auto;
+    border-radius: 10px;
+    padding:20px;
+    text-align:center;
+    margin-top:100px;
+    font-family: 'Dosis',sans-serif;
+    font-weight: 300;
+    font-size:30px;
+}
+
+button[name="return"]
+{
+    background-color: #009933;
+    outline:none;
+    border:none;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    color:white;
+    font-family: 'Dosis', sans-serif;
+    font-size:20px;
+    cursor: pointer;
+    border-radius:10px;
+    margin-top:20px;
+    transition: background-color 0.5s;
+}
+
+button[name="return"]:active
+{
+    background-color: #017226;
+}

@@ -1,0 +1,133 @@
+body{
+    background-color: lavender;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height:fit-content;
+}
+
+.header{
+    background-color: rgb(169, 13, 241);
+    width:auto;
+    padding: 10px 20px 0px 20px;
+    height: 37px;
+    border:none;
+    border-radius: 10px;
+}
+
+#logo{
+    font-size: 20px;
+    color:white;
+    float: left;
+    width:70%;
+}
+
+div#acc{
+    float:left;
+    width: 30%;
+    color: white;
+    font-size: 17px;
+    text-align:right;
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+.middle{
+    background-color: white;
+    width:auto;
+    padding: 1px 20px 20px 20px;
+    height: fit-content;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#title{
+    color:rgb(169, 13, 241);
+    font-size: 25px;
+}
+
+.item{
+    float:left;
+    width: 150px;
+    text-align: center;
+    margin: 5px 20px 5px 20px;
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px;
+    padding: 20px 0px 0px 0px;
+    transition: 500ms;
+}
+
+.item:hover{
+    background-color:rgb(214, 213, 213);
+}
+
+.item:active{
+    background-color:rgb(182, 182, 182);
+}
+
+#item-icon{
+    width: 30%;
+}
+
+p{
+    user-select: none;
+}
+
+#box{
+    outline: none;
+    border:1px solid grey;
+    border-radius: 10px;
+    height: fit-content;
+    width:fit-content;
+    position: absolute;
+    animation: fade 500ms;
+    top:50px;
+}
+
+@keyframes fade {
+    0%{top:30px;opacity:70%}
+    100%{top:50px;opacity: 100%;}
+}
+
+.tile{
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top:7px;
+    color:grey;
+    font-size: 20px;
+    font-weight: lighter;
+    transition: 500ms;
+    cursor: pointer;
+    width: 200px;
+    user-select: none;
+}
+
+.tile:hover{
+    background-color:rgb(231, 227, 227);
+}
+
+.tile:active{
+    background-color:rgb(202, 200, 200);
+}
+
+#tile-icon{
+    margin-right: 10px;
+}
+
+@media all and (max-width:768px){ /*tablet and mobile */
+    #box{
+        left: 20%;
+    }
+}
+
+@media all and (min-width:769px){ /*pc */
+    #box{
+        left: 70%;
+    }
+}
+
+#services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="account.css">
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <div id="main">
+            <p style="color:rgb(169, 13, 241);font-size:25px; margin-left: 20px;">Sign up</p>
+            <form method="POST" id="account" name="account">
+            <table>
+                <tr id="username">
+                    <td class="heading" id="lblusn">Username</td>
+                    <td>
+                        <input class="field" type="text" name="username" id="usn">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td id="unbl" class="blank"></td>
+                </tr>
+
+                <tr id="password">
+                    <td class="heading" id="lblpw" name="lblpw">Password</td>
+                    <td>
+                        <input class="field" type="password" id="pass" name="password">
+                        <label class="show">
+                            <img src="eye.svg" id="eye">
+                            <input type="checkbox" id="show">
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td id="pwbl" class="blank"></td>
+                </tr>
+
+                <tr id="repass">
+                    <td class="heading" id="lblrpw" name="lblrpw">Confirm password</td>
+                    <td>
+                        <input class="field" type="password" id="reps" name="repass">
+                        <label class="show">
+                            <img src="eye.svg" id="reey">
+                            <input type="checkbox" id="resh">
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td id="rpbl" class="blank"></td>
+                </tr>
+
+                <style>
+                    .blank{
+                        color:red;
+                        font-size:15px;
+                        padding: 2px;
+                    }
+
+                    img[src="eye.svg"]{
+                        cursor: pointer;
+                    }
+                </style>
+            </table>
+
+            </form>
+            
+            <div id="tcs">
+                <div id="checkbox">
+                    <input type="checkbox" id="check">
+                    <label for="check" id="lblcheck"></label>
+                </div>
+
+                <span>I agree with <span id="read" onclick="location.href='tcs.html'">Terms and Conditions</span> while using this software.</span>
+            </div>
+
+            <button id="sgin">Create account</button>
+        </div>
+
+        <script src="signup.js"></script>
+    </body>
+</html>

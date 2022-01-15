@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="depart.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+            <div class="title">
+                <label id="title">Câu hỏi tuyển thành viên ban Hậu cần dự án X</label>
+            </div>
+            
+            <form name="depart" action="donehc.php" method="POST">
+                <div class="field">
+                    <label class="field">Câu hỏi 1</label> <br/>
+                    <input type="text" name="q1">
+                </div>
+
+                <div class="field">
+                    <label class="field">Câu hỏi 2</label> <br/>
+                    <input type="text" name="q2">
+                </div>
+
+                <div class="field">
+                    <label class="field">Câu hỏi 3</label> <br/>
+                    <input type="text" name="q3">
+                </div>
+
+                <div class="field">
+                    <label class="field">Câu hỏi 4</label> <br/>
+                    <input type="text" name="q4">
+                </div>
+
+                <div class="field">
+                    <label class="field">Câu hỏi 5</label> <br/>
+                    <input type="text" name="q5">
+                </div>
+               
+                <button id="next">Tiếp</button>
+            </form>
+
+            <button id="prev" onclick="history.back()">Quay lại</button>
+        </div>
+
+        <footer>Credit:</footer>
+        
+    </body>
+</html>

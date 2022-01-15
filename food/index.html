@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Khanhfood</title>
+        <link rel="shortcut icon" href="logofood.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="food.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body style="background-image: url('bg food.jpg');">
+            <form name="order" action="food.php" method="POST">
+                <label name="title">Đơn đặt hàng Khanhfood</label> <br/>
+                
+                <div name="name" class="field">
+                    <label class ="field" name="name">Tên của bạn:</label> 
+                    <input type="text" name="name">
+                </div>
+
+                <span name="text">Thông tin đơn hàng:</span>
+
+                <div name="pizza" class="field">
+                    <label class ="field" name="pizza">Pizza:</label>
+                    <input type="number" name="pizza" min="0" placeholder="0">
+                    <label class ="field" name="pizza">chiếc</label>
+                </div>
+
+                <div name="chicken" class="field">
+                    <label class ="field" name="chicken">Gà rán:</label>
+                    <input type="number" name="chicken" min="0" placeholder="0">
+                    <label class ="field" name="chicken">hộp 2 chiếc</label>
+                </div>
+
+                <div name="coke" class="field">
+                    <label class ="field" name="coke">Coca:</label>
+                    <input type="number" name="coke" min="0" placeholder="0">
+                    <label class ="field" name="coke">cốc</label>
+                </div>
+
+                <div name="address" class="field">
+                    <label class ="field" name="address">Địa chỉ nhận hàng:</label> 
+                    <input type="textarea" name="address">
+                </div>
+
+                <button name="done">Xác nhận đơn hàng</button>
+            </form>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "stringee-chat-js-sdk": "^0.2.0"
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="account.css">
+    </head>
+    <body>
+        <div id="main">
+            <p style="color:rgb(169, 13, 241);font-size:25px; margin-left: 20px;">Sign in</p>
+        <form id="account" name="account">
+              <table>
+                <tr id="username">
+                    <td class="heading" id="lblusn">Username</td>
+                    <td>
+                        <input class="field" type="text" name="username" id="usn">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td id="unbl"></td>
+                </tr>
+
+                <tr id="password">
+                    <td class="heading" id="lblpw">Password</td>
+                    <td>
+                        <input class="field" type="password" id="pass" name="password">
+                        <label class="show">
+                            <img src="eye.svg" id="eye">
+                            <input type="checkbox" id="show">
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td id="pwbl"></td>
+                </tr>
+            </table>
+            
+            
+        </form>
+
+        <button id="sgin">Sign in</button>
+        <button id="sgup" onclick="location.href='signup.html'">Sign up</button>
+
+        </div>
+
+        <script>
+            document.getElementById('show').onchange=function(){
+                if(this.checked){
+                    document.getElementById('pass').type="text";
+                    document.getElementById('eye').style.opacity="100%";
+                }
+                else{
+                    document.getElementById('pass').type="password";
+                    document.getElementById('eye').style.opacity="50%";
+                }
+            }
+
+            //username blank
+            document.getElementById('usn').onblur=function(){
+                if(this.value===""){
+                    document.getElementById('unbl').innerText="This field must not be blank!";
+                    this.style.borderBottom="1px solid red";
+                    document.getElementById('lblusn').style.color="red";
+                }
+                else{
+                    this.style.borderBottom="1px solid grey";
+                }
+            }
+
+            document.getElementById('usn').onfocus=function(){
+                document.getElementById('unbl').innerText="";
+                this.style.borderBottom="1px solid rgb(169, 13, 241)";
+                document.getElementById('lblusn').style.color="black";
+            }
+
+            //password blank
+            document.getElementById('pass').onblur=function(){
+                if(this.value===""){
+                    document.getElementById('pwbl').innerText="This field must not be blank!";
+                    this.style.borderBottom="1px solid red";
+                    document.getElementById('lblpw').style.color="red";
+                }
+                else{
+                    this.style.borderBottom="1px solid grey";
+                }
+            }
+
+            document.getElementById('pass').onfocus=function(){
+                document.getElementById('pwbl').innerText="";
+                this.style.borderBottom="1px solid rgb(169, 13, 241)";
+                document.getElementById('lblpw').style.color="black";
+            }
+
+            //button clicked
+            document.getElementById('sgin').onclick=function(){
+                if(document.getElementById('usn').value===""){
+                    document.getElementById('unbl').innerText="This field must not be blank!";
+                    document.getElementById('usn').style.borderBottom="1px solid red";
+                    document.getElementById('lblusn').style.color="red";
+                }
+
+                if(document.getElementById('pass').value===""){
+                    document.getElementById('pwbl').innerText="This field must not be blank!";
+                    document.getElementById('pass').style.borderBottom="1px solid red";
+                    document.getElementById('lblpw').style.color="red";
+                }
+
+                if (document.getElementById('usn').value!=="" && document.getElementById('pass').value!=="") {
+                    document.getElementById('account').method="POST";
+                    document.getElementById('account').action="signin.php";
+                    document.getElementById('account').submit();
+                }
+            }
+        </script>
+    </body>
+</html>

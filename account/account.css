@@ -1,0 +1,100 @@
+body{
+    background-color:lavender;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div#main{
+    background-color:white;
+    border-radius: 10px;
+    margin: auto;
+    width: fit-content;
+    padding: 10px 20px 10px 20px;
+    margin-top: 10%;
+}
+
+#username,#password{
+    margin:10px;
+}
+
+.field{
+    margin-left: 10px;
+    outline:none;
+    border: none;
+    border-bottom:1px solid grey;
+    padding: 3px;
+    transition: 500ms ease-in-out;
+}
+
+.field:focus{
+    border-bottom:1px solid rgb(169, 13, 241);
+}
+
+.heading{
+    font-size:17px;
+}
+
+label{
+    font-size:17px;
+}
+
+#reey{
+    opacity: 50%;
+    position: relative;
+    top:10px;
+}
+
+#eye{
+    opacity: 50%;
+    position: relative;
+    top:10px;
+}
+
+img[src="eye.svg"]{
+    cursor: pointer;
+}
+
+#show{
+    opacity: 0%;
+}
+
+#resh{
+    opacity: 0%;
+}
+
+.blank{
+    color:red;
+    font-size:15px;
+    padding: 2px;
+}
+
+button{
+    cursor: pointer;
+    border-radius: 7px;
+    outline:none;
+    padding: 5px 10px 5px 10px;
+    font-size: 17px;
+    margin: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition:500ms;
+}
+
+#sgin{
+    background-color:rgb(169, 13, 241);
+    color:white;
+    border: 1px solid rgb(169, 13, 241);
+}
+
+#sgup{
+    background-color: white;
+    border: 1px solid rgb(169, 13, 241);
+    color:rgb(169, 13, 241);
+}
+
+#sgin:active{
+    background-color:rgb(101, 6, 145);
+    border: 1px solid rgb(101, 6, 145);
+}
+
+#sgup:active{
+    background-color: rgb(197, 195, 195);
+}

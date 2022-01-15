@@ -1,0 +1,114 @@
+@media all and (max-width:1024px) /*mobile*/
+{
+    div.title
+    {
+        font-size:40px;
+    }
+
+    button#contact
+    {
+        padding-top:5px;
+        padding-bottom: 5px;
+        padding-left:10px;
+        padding-right:10px;
+        font-size: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+@media all and (min-width:1025px) /*pc*/
+{
+    div.main
+    {
+        width:70%;
+        margin:auto;
+    }
+
+    a#logo
+    {
+        font-size:200%;
+    }
+
+    div.title
+    {
+        font-size: 72px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    button#contact
+    {
+        padding-top:15px;
+        padding-bottom: 15px;
+        padding-left:20px;
+        padding-right:20px;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+div.topbar
+{
+    background-color: #333333;
+    padding:20px;
+}
+
+a#logo
+{
+    text-decoration:none;
+    color:white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+div.title
+{
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-weight: bold;
+    width:60%;
+    z-index: -95;
+    position: absolute;
+    top: 250px;
+}
+
+button#contact
+{
+    outline:none;
+    border:1px solid #bbbbbb;
+    border-radius: 7px;
+    
+    background-color: #bbbbbb;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    cursor: pointer;
+}
+
+button#contact:hover
+{
+    background-color:#ffffff;
+    color:#bbbbbb;
+}
+
+button#contact:active
+{
+    background-color: #e0e0e0;
+}
+
+div.mid2
+{
+    text-align: center;
+}
+
+img#bulb
+{
+    margin-top:50px;
+    width:100px;
+}
+
+img#bg{
+    z-index: -99;
+    position: relative;
+}

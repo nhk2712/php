@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="tuyenmem.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+    </head>
+
+    <body style="background:url('dotbg.jpg')">
+        <div class="main">
+            <div class="header"><img src="header.png" id="header" draggable="false"></div>
+            
+            <div class="title">Đơn tuyển thành viên dự án X</div>
+
+            <div class="info">
+                <div class="prj">Thông tin dự án</div> <br/> <br/>
+                <div class="required">
+                    <label id="star-in-info">*</label>
+                    <label id="text-in-info">Bắt buộc</label>
+                </div>
+            </div>
+
+            <form name="don" action="depart/" method="POST">
+                <div class="field">
+                    <label>Họ và tên của bạn:</label> <label id="star">*</label> <br/>
+                    <input type="text" name="name">
+                </div>
+                
+                <div class="field">
+                    <label>Ngày, tháng, năm sinh:</label> <label id="star">*</label> <br/>
+                    <input type="date" name="dob">
+                </div>
+
+                <div class="field">
+                    <label>Trường - lớp:</label> <label id="star">*</label> <br/>
+                    <input type="text" name="school">
+                </div>
+
+                <div class="field">
+                    <label>SĐT liên lạc:</label> <label id="star">*</label> <br/>
+                    <input type="text" name="phone">
+                </div>
+
+                <div class="field">
+                    <label>Email:</label> <label id="star">*</label> <br/>
+                    <input type="text" name="email">
+                </div>
+
+                <div class="field">
+                    <label>Link FB cá nhân:</label> <label id="star">*</label> <br/>
+                    <input type="text" name="fb">
+                </div>
+
+                <div class="field">
+                    <label>Kinh nghiệm tham gia các tổ chức khác?</label> <label id="star">*</label> <br/>
+                    <input type="text" name="exp">
+                </div>
+
+                <div class="field">
+                    <label>Tại sao bạn lại quyết định tham gia dự án X?</label> <label id="star">*</label> <br/>
+                    <input type="text" name="why">
+                </div>
+
+                <div class="field">
+                    <label>Bạn muốn là thành viên của ban nào?</label> <label id="star">*</label> <br/>
+                    <select name="depart">
+                        <option>-- Chọn ban --</option>
+                        <option>Nội dung</option>
+                        <option>Tài chính - Đối ngoại</option>
+                        <option>Hậu cần</option>
+                        <option>Truyền thông</option>
+                        <option>Media</option>
+                        <option>Design</option>
+                    </select>
+                </div>
+
+                <button>Tiếp</button>
+            </form>
+        </div>
+        
+        <footer>
+            Credit:
+        </footer>
+    </body>
+</html>

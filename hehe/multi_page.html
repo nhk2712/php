@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <input type="range" min="0" max="5" style="
+            color:black;
+            
+        ">
+
+        <form name="form1">
+            <select name="select1">
+                <option value="0">Hehe</option>
+                <option value="1">Hihi</option>
+            </select>
+        </form>
+        <button onclick="show()">Hiện kết quả</button>
+        <script>
+            var a=document.getElementsByName("select1");
+            var result=a.values;
+
+            function show()
+            {
+                alert(result);
+            }
+        </script>
+    </body>
+</html>
